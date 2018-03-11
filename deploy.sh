@@ -30,11 +30,11 @@ git checkout gh-pages
 rm -rf !(CNAME|.gitignore) # dont delete CNAME and README.md
 git add -A && git commit -m "delete old site"
  
-# switch to hakyll branch and rebuild website
+# switch to master branch and rebuild website
 git checkout master
 stack exec site rebuild
  
-# switch to master, extract site and push
+# switch to gh-pages, extract site and push
 git checkout gh-pages
 mv _site/* .
 git add -A && git commit --amend --allow-empty -m "$1"
