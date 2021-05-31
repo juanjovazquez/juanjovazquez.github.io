@@ -4,11 +4,17 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
+<p>
+Hello there! My name is Juanjo Vázquez and I've been working on IT for quite a long time. Currently CTO at <a href="https://www.tecsisa.com">Tecsisa</a>.
+</p>
+
+<p>
+If you're interested in knowing more about me check out my <a href="https://www.linkedin.com/in/juanjovazquez/">LinkedIn</a> and <a href="https://twitter.com/juanjovazquez">Twitter</a> accounts. I'm not super active on any of these platforms but just in case.
+</p>
+
 {% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+<h2>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %} from <a href="{{ '/posts/' | url }}">the blog</a></h2>
 
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
-
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
