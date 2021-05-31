@@ -10,14 +10,14 @@
     "url": "https://www.juanjovazquez.es/about-me/"
   },
   "items": [{
-      "id": "https://www.juanjovazquez.es/eleventy-base-blog/posts/secondpost/",
-      "url": "https://www.juanjovazquez.es/eleventy-base-blog/posts/secondpost/",
+      "id": "https://www.juanjovazquez.es/posts/secondpost/",
+      "url": "https://www.juanjovazquez.es/posts/secondpost/",
       "title": "This is my second post.",
-      "content_html": "<p>Intro.</p>\n<h2 id=\"section-header\">Section Header <a class=\"direct-link\" href=\"#section-header\">#</a></h2>\n<p><a href=\"/eleventy-base-blog/posts/firstpost/\">First post</a></p>\n<p>More...</p>\n",
+      "content_html": "<p>Intro.</p>\n<h2 id=\"section-header\">Section Header <a class=\"direct-link\" href=\"#section-header\">#</a></h2>\n<p><a href=\"/posts/firstpost/\">First post</a></p>\n<p>More...</p>\n",
       "date_published": "2020-07-04T00:00:00Z"
     },{
-      "id": "https://www.juanjovazquez.es/eleventy-base-blog/posts/firstpost/",
-      "url": "https://www.juanjovazquez.es/eleventy-base-blog/posts/firstpost/",
+      "id": "https://www.juanjovazquez.es/posts/firstpost/",
+      "url": "https://www.juanjovazquez.es/posts/firstpost/",
       "title": "This is my first post.",
       "content_html": "<p>TBD Intro.</p>\n<h2 id=\"section-header\">Section Header <a class=\"direct-link\" href=\"#section-header\">#</a></h2>\n<p>TBD Body.</p>\n",
       "date_published": "2018-05-01T00:00:00Z"

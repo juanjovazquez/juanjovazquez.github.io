@@ -3,7 +3,7 @@
 	<title>Juanjo Vázquez</title>
 	<subtitle>Personal site</subtitle>
 	
-	<link href="https://www.juanjovazquez.es/eleventy-base-blog/feed/feed.xml" rel="self"/>
+	<link href="https://www.juanjovazquez.es/feed/feed.xml" rel="self"/>
 	<link href="https://www.juanjovazquez.es"/>
 	<updated>2020-07-04T00:00:00Z</updated>
 	<id>https://juanjovazquez.es/</id>
@@ -14,23 +14,23 @@
 	
 	<entry>
 		<title>This is my second post.</title>
-		<link href="https://www.juanjovazquez.es/eleventy-base-blog/posts/secondpost/"/>
+		<link href="https://www.juanjovazquez.es/posts/secondpost/"/>
 		<updated>2020-07-04T00:00:00Z</updated>
-		<id>https://www.juanjovazquez.es/eleventy-base-blog/posts/secondpost/</id>
+		<id>https://www.juanjovazquez.es/posts/secondpost/</id>
 		<content type="html">&lt;p&gt;Intro.&lt;/p&gt;
-&lt;h2 id=&quot;section-header&quot;&gt;Section Header &lt;a class=&quot;direct-link&quot; href=&quot;https://www.juanjovazquez.es/eleventy-base-blog/posts/secondpost/#section-header&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.juanjovazquez.es/eleventy-base-blog/posts/firstpost/&quot;&gt;First post&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;section-header&quot;&gt;Section Header &lt;a class=&quot;direct-link&quot; href=&quot;https://www.juanjovazquez.es/posts/secondpost/#section-header&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.juanjovazquez.es/posts/firstpost/&quot;&gt;First post&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;More...&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>This is my first post.</title>
-		<link href="https://www.juanjovazquez.es/eleventy-base-blog/posts/firstpost/"/>
+		<link href="https://www.juanjovazquez.es/posts/firstpost/"/>
 		<updated>2018-05-01T00:00:00Z</updated>
-		<id>https://www.juanjovazquez.es/eleventy-base-blog/posts/firstpost/</id>
+		<id>https://www.juanjovazquez.es/posts/firstpost/</id>
 		<content type="html">&lt;p&gt;TBD Intro.&lt;/p&gt;
-&lt;h2 id=&quot;section-header&quot;&gt;Section Header &lt;a class=&quot;direct-link&quot; href=&quot;https://www.juanjovazquez.es/eleventy-base-blog/posts/firstpost/#section-header&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;section-header&quot;&gt;Section Header &lt;a class=&quot;direct-link&quot; href=&quot;https://www.juanjovazquez.es/posts/firstpost/#section-header&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;TBD Body.&lt;/p&gt;
 </content>
 	</entry>
