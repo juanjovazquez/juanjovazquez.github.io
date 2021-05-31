@@ -7,4 +7,4 @@ eleventyNavigation:
   order: 3
 ---
 
-I am a person that writes stuff.
+My name is Juan-José Vázquez and I am currently the CTO of Tecsisa.
