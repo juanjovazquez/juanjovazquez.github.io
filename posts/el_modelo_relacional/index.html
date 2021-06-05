@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El modelo relacional</title>
+    <meta name="description" content="El modelo relacional. Base de datos SQL y NoSQL. Lenguajes de programación.">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Juanjo Vázquez">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Juanjo Vázquez">
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32"/>
+  </head>
+  <body>
+    <header>
+      <h1 class="home"><a href="/">Juanjo Vázquez</a></h1>
+      <ul class="nav">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/posts/">Blog</a></li>
+      </ul>
+    </header>
+
+    <main class="tmpl-post">
+
+      <!-- Delete this message -->
+      <!--
+      <div class="warning">
+        <ol>
+          <li>Edit the <code>_data/metadata.json</code> with your blog’s information.</li>
+          <li>(Optional) Edit <code>.eleventy.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
+          <li>Delete this message from <code>_includes/layouts/base.njk</code>.</li>
+        </ol>
+        <p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
+      </div>
+      -->
+      <!-- Stop deleting -->
+
+      <h1>El modelo relacional</h1>
+
+<time datetime="2021-06-06">06 Jun 2021</time><a href="/tags/bases-de-datos/" class="post-tag">bases de datos</a>
+
+<p>&quot;Pásame por favor el modelo de datos&quot;, ¿os suena familiar?. Si la respuesta es que sí, seguro que como yo has ido a un montón de reuniones técnicas para hablar de cómo demonios integrarse con tu sistema. El modelo de datos, el santo grial que conduce a la verdad absoluta sobre un sistema de software. Pero, ¿realmente lo es?. Sinceramente lo dudo y creo que responde más al deseo de quien pregunta de asumir algo que pueda comprender, que encaje en su modelo mental y pueda mantener sin tener que aprender nada nuevo que cuestione sus mantras y verdades absolutas.</p>
+<p>Para empezar, ¿sobre qué modelo y sobre qué datos se nos pregunta?. Aunque no se especifique claramente, todos sabemos de qué estamos hablando: un <a href="https://en.wikipedia.org/wiki/Relational_model">modelo de datos relacional</a> y operacional en <a href="https://en.wikipedia.org/wiki/Database_normalization">tercera forma normal</a>. Es decir, la típica sábana de tablas con relaciones que modelan entidades y (supuestamente) procesos de negocio. Hasta te puedes imaginar la arquitectura de la aplicación que trabaja con estos datos. Tres capas, con su front y back, <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> por supuesto, algún framework que lo pegue todo, en Python, C#, Java o PHP, qué más da. Se parecen todas. El código es irrelevante porque todo lo importante está en la base de datos, ¿verdad?.</p>
+<p>La hipérbole de esta manera de pensar fueron los procesos almacenados. Los señores <a href="https://en.wikipedia.org/wiki/Larry_Ellison">Ellison</a> y <a href="https://en.wikipedia.org/wiki/Bill_Gates">Gates</a> nos ataron a sus <a href="https://en.wikipedia.org/wiki/Oracle_Database">Oracle</a> y <a href="https://en.wikipedia.org/wiki/Microsoft_SQL_Server">SQL Server</a> generando toneladas de código propietario del que todavía muchos están tratando de salir. La lógica de negocio quedaba relegada a una fina capa de código que invocaba a un <a href="https://en.wikipedia.org/wiki/Stored_procedure">procedimiento almacenado</a> que se ocupaba del resto. Resto, que a la postre era lo que realmente importaba. Procedimientos que no componen por supuesto. Y cuando algo no iba bien, ponte a debuguear. Por cierto, la historia del <em>vendor lock-in</em> se sigue repitiendo disfrazada de novedad tecnológica (hola <a href="https://en.wikipedia.org/wiki/AWS_Lambda">Amazon Lambda</a>). No caigais en la trampa de nuevo. Las consultoras harán el agosto y después te tocará a ti lidiar con el legacy. Mal negocio.</p>
+<p>Pues resulta que cuando quieres escalar una aplicación entonces la base de datos, <em>esa</em> base de datos, se convierte en un problema. Para empezar, la escalabilidad horizontal pondrá tus queridas propiedades <a href="https://en.wikipedia.org/wiki/ACID">ACID</a>, ésas que hacen posible que tu lógica de negocio esté enterrada entre las tablas de la base de datos, contra las cuerdas. Tendrás que aprender un nuevo acrónimo, <a href="https://en.wikipedia.org/wiki/CAP_theorem">CAP</a>, y entender por qué te afecta y por qué tu mundo ideal en el que el código importa más bien poco se derrumba. Ponte a reaprender a programar, a replantearte muchas cosas que hacías y, para bien, a descubrir todo lo que te estabas perdiendo. Por supuesto siempre puedes escalar verticalmente pero entonces prepara la cartera, de nuevo Ellison <em>et al.</em> se pondrán muy contentos.</p>
+<p>Por supuesto empiezan a aparecer alternativas que podrían permitirte volver a la comodidad de las garantías ACID y el modelo relacional en el mundo operacional, como <a href="https://en.wikipedia.org/wiki/Spanner_(database)">Google Spanner</a>, <a href="https://en.wikipedia.org/wiki/CockroachDB">CockroachDB</a>, <a href="https://en.wikipedia.org/wiki/FoundationDB">FoundationDB</a>, <a href="https://fauna.com">FaunaDB</a>, etc, algunas de ellas inspiradas en el <em><a href="https://blog.acolyer.org/2019/03/29/calvin-fast-distributed-transactions-for-partitioned-database-systems/">Calvin paper</a></em>, y que explotan diversos compromisos a los que puede llegarse para superar las limitaciones que impone CAP. Mientras esto madura, el tiempo de las <a href="https://en.wikipedia.org/wiki/Apache_Cassandra">Cassandras</a>, <a href="https://en.wikipedia.org/wiki/MongoDB">Mongos</a> y <a href="https://en.wikipedia.org/wiki/Amazon_DynamoDB">Dynamos</a> continúa, lo que conocemos por <a href="https://en.wikipedia.org/wiki/NoSQL">NoSQL</a>. Vamos hacia una convivencia entre ambas aproximaciones, como siempre, dependiendo de tu caso de uso. Qué esperabas. No iba a ser tan fácil, ¿no?.</p>
+<h2 id="vuelta-a-los-lenguajes-de-programaci%C3%B3n">Vuelta a los lenguajes de programación <a class="direct-link" href="#vuelta-a-los-lenguajes-de-programaci%C3%B3n">#</a></h2>
+<p>En cualquier caso, si algo hemos aprendido por el camino es que es el momento de los lenguajes de programación. La base de datos debe ser tu capa de persistencia, nada más, ni nada menos. La lógica de negocio, lo importante, se merece la mejor herramienta que tengas para expresar sus intrincadas reglas y dependencias. Un lenguaje de programación de alto nivel y un paradigma que te permitan componer programas como piezas simples que encajan para componer otras más complejas. En mi caso, en los últimos años estas herramientas han sido <a href="https://en.wikipedia.org/wiki/Scala_(programming_language)">Scala</a> y la <a href="https://en.wikipedia.org/wiki/Functional_programming">programación funcional</a>, pero pueden ser otras. Lo importante es no renunciar a un montón de años de investigación sobre computabilidad y lenguajes, desde <a href="https://en.wikipedia.org/wiki/Ada_Lovelace">Ada Lovelace</a> a <a href="https://en.wikipedia.org/wiki/Martin_Odersky">Martin Odersky</a> o <a href="https://en.wikipedia.org/wiki/Philip_Wadler">Philip Wadler</a>, y aprovechar la mejor herramienta a tu alcance para expresarte. El mundo no se acaba en el SQL y en Excel, lo podemos hacer mucho mejor.</p>
+<p>¿Significa esto que debería renunciar a mi modesta pero robusta PostgreSQL?. Para nada. Si cubre tus necesidades de persistencia probablemente no haya nada mejor. Pero si el problema técnico a resolver requiere de otra cosa, tampoco le des martillazos a la pobre <a href="https://en.wikipedia.org/wiki/PostgreSQL">PostgreSQL</a> para que se parezca a lo que necesitas. Probablemente te toque remangarte y ponerte a diseñar pensando no sólo en los requerimientos funcionales sino también en los técnicos. Cuando eso ocurra, probablemente lo último que debes pensar es en qué base de datos y aproximación de persistencia vas a tomar. Piensa primero en cómo vas a resolver el problema con tu lenguaje de programación o incluso plantéate si es el adecuado para el problema a resolver, aunque no menosprecies el coste del cambio. Todo cuesta.</p>
+<p>Últimamente cuando me piden el modelo de datos suelo responder que mi sistema tiene unos cuantos, ¿a cuál te refieres?, ¿seguridad?, ¿algún servicio de negocio concreto?. Si tienes tiempo te explico el diseño del sistema. Es muy interesante ya verás. Y en una pizarra, física o virtual, se va explicando. Con todas sus complejidades y matices. Lo siento pero no me cabe en un Excel y mucho menos en un PowerPoint. Esto no es fácil, ya sabes.</p>
+
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /posts/el_modelo_relacional/ -->
+  </body>
+</html>
