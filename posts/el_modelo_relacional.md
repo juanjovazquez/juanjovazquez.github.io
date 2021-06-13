@@ -3,7 +3,7 @@ title: El modelo relacional
 description: El modelo relacional. Base de datos SQL y NoSQL. Lenguajes de programación.
 date: 2021-06-06
 tags:
-  - bases de datos
+  - databases
 layout: layouts/post.njk
 ---
 
